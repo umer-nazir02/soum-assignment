@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import CheckBox from "@react-native-community/checkbox"; // Import CheckBox (Make sure to install this package if not already installed)
+import CheckBox from "@react-native-community/checkbox";
 import { CustomCheckBoxProps } from "../types";
 
 const CustomCheckBox = ({
