@@ -1,20 +1,47 @@
+// {
+//   "extends": "@react-native/typescript-config/tsconfig.json",
+//   "compilerOptions": {
+// 	"jsx": "react",
+// 	"jsx": "react",
+//     "types": ["jest", "node"],
+//     "paths": {
+//       "@/*": ["./src/*"],
+//     },
+//     "allowImportingTsExtensions": false
+//   },
+//   "include": [
+//     "./src/**/*",
+//     "./src/@types/**/*",
+//     "index.d.ts",
+//     ".eslintrc.js",
+//     "jest.setup.js",
+//     "jest.config.js",
+//     "babel.config.js",
+//     "index.js"
+//   ]
+// }
+
 {
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
-    "types": ["jest", "node"],
-    "paths": {
-      "@/*": ["./src/*"],
-    },
-    "allowImportingTsExtensions": false
+    "target": "esnext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-native",
+    "lib": ["esnext"],
+    "types": [
+      // fix declaration collision between react-native and ts-jest
+      "react",
+      "react-native",
+      "react-redux",
+      "redux",
+      "jest"
+    ]
   },
-  "include": [
-    "./src/**/*",
-    "./src/@types/**/*",
-    "index.d.ts",
-    ".eslintrc.js",
-    "jest.setup.js",
-    "jest.config.js",
-    "babel.config.js",
-    "index.js"
-  ]
+  "include": ["src", "App.tsx", "src/__tests__/TreeItem.test.tsx"]
 }
