@@ -7,7 +7,7 @@ import TreeItem from "../components/TreeItem";
 jest.mock("../src/context/ContextProvider", () => ({
   useProductTree: jest.fn(),
   ProductTreeContext: jest.requireActual("../src/context/ContextProvider")
-    .ProductTreeContext, // Use the real context for provider wrapping if needed
+    .ProductTreeContext,
 }));
 
 // Helper function to provide context
